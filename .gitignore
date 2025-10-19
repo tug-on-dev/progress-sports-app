@@ -1,0 +1,64 @@
+# Progress OpenEdge artifacts
+*.r
+*.w
+*.cls
+*.log
+*.lck
+*.dump
+*.backup
+*.pl
+
+# Build artifacts
+artifacts/
+build/
+dist/
+
+# Database files
+*.db
+*.d*
+*.l*
+*.b*
+*.lg
+*.st
+
+# Environment specific files
+*.pf.bak
+local.properties
+
+# IDE files
+.vscode/
+.idea/
+*.sublime-*
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Runtime files
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+
+# node_modules (if any JS dependencies)
+node_modules/
+
+# AWS deployment files
+.aws/
+*.pem
+*.key
+
+# Temporary files
+tmp/
+temp/
