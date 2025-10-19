@@ -11,6 +11,17 @@ Look at all the project #codebase :
 - Identify all the Deployment scenarios addressed by the code, and document them.
 - Identify all the Usability features addressed by the code, and document them.
 
+- When you write functional requirements, use the following format:
+  - **Requirement**: Short description
+  - **Priority**: Must have / Should have / Could have / Won't have
+  - **Rationale**: Why is this requirement important?
+  - **Source**: Which part of the code addresses this requirement?
+- When you write non-functional requirements, use the following format:
+  - **Requirement**: Short description
+  - **Category**: Performance / Security / Scalability / Maintainability / Usability
+  - **Rationale**: Why is this requirement important?
+  - **Source**: Which part of the code addresses this requirement?  
+
 For all the above points, create a technical documentation in markdown format with mermaid diagrams if needed.
 
 Put this in a specific subfolder in documentation folder based on the module name.
