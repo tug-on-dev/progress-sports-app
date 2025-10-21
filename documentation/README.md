@@ -1,73 +1,92 @@
-# Documentation de l'Application Sports
+# Sports Application Documentation
 
-Cette documentation fournit une analyse complète de l'application Sports développée avec Progress OpenEdge/4GL, déployée sur AWS avec une architecture 3-tiers.
+Welcome to the comprehensive documentation for the Sports Application built with Progress OpenEdge/4GL and deployed on AWS.
 
-## Index de la Documentation
+## 🌐 Available Languages / Langues Disponibles
 
-### 📐 Architecture
-- [Vue d'ensemble de l'architecture](./architecture/architecture-overview.md) - Architecture générale 3-tiers
-- [Diagrammes UML](./architecture/uml-diagrams.md) - Diagrammes de classes et de séquences
-- [Architecture des composants](./architecture/component-architecture.md) - Structure des modules et interactions
+This documentation is available in multiple languages:
 
-### 📋 Exigences
-- [Exigences fonctionnelles (MoSCoW)](./requirements/functional-requirements.md) - Fonctionnalités selon la méthode MoSCoW
-- [Exigences non-fonctionnelles](./requirements/non-functional-requirements.md) - Performance, sécurité, etc.
+- **[English Documentation](./en/README.md)** - Complete documentation in English
+- **[Documentation Française](./fr/README.md)** - Documentation complète en français
 
-### 🚀 Déploiement
-- [Scénarios de déploiement](./deployment/deployment-scenarios.md) - Local et AWS Cloud
-- [Guide de déploiement](./deployment/deployment-guide.md) - Instructions détaillées
-- [Configuration AWS](./deployment/aws-configuration.md) - CloudFormation et infrastructure
+## 📚 Documentation Overview
 
-### 🔌 API
-- [Documentation API](./api/api-documentation.md) - Points d'accès REST/JSON
-- [Référence WebSpeed](./api/webspeed-reference.md) - Programmes 4GL et endpoints
+This documentation suite provides comprehensive coverage of:
 
-### 🎯 Utilisation
-- [Fonctionnalités d'utilisation](./requirements/usability-features.md) - Interface utilisateur et ergonomie
+### Architecture
+- 3-tier architecture design (Web, Application, Database)
+- Component interactions and data flow
+- UML diagrams and technical specifications
 
-## Technologies Utilisées
+### Requirements
+- Functional requirements using MoSCoW methodology
+- Non-functional requirements (performance, security, scalability)
+- Usability features and user interface design
+
+### Deployment
+- Local development setup
+- AWS cloud deployment with CloudFormation
+- Infrastructure configuration and monitoring
+
+### API Reference
+- REST/JSON API endpoints
+- WebSpeed program reference
+- Integration guidelines
+
+## 🛠 Technologies
 
 - **Backend**: Progress OpenEdge 4GL, WebSpeed, PASOE
 - **Frontend**: HTML5, JavaScript, Kendo UI
-- **Base de données**: Progress sports2020 avec réplication
+- **Database**: Progress sports2020 with replication
 - **Infrastructure**: AWS (EC2, CloudFormation), nginx
 - **CI/CD**: GitHub Actions
 
-## Architecture Générale
+## 🚀 Quick Start
 
-```mermaid
-graph TB
-    subgraph "Couche Web"
-        nginx[nginx]
-        static[Fichiers statiques HTML/JS]
-    end
-    
-    subgraph "Couche Application"
-        pasoe[PASOE]
-        webspeed[WebSpeed]
-    end
-    
-    subgraph "Couche Base de Données"
-        db0[(sports2020 DB0<br/>Source)]
-        db1[(sports2020 DB1<br/>Target)]
-        db2[(sports2020 DB2<br/>Target)]
-    end
-    
-    static --> nginx
-    nginx --> pasoe
-    pasoe --> webspeed
-    webspeed --> db0
-    db0 -.->|Réplication| db1
-    db0 -.->|Réplication| db2
+1. Choose your preferred language:
+   - [English Documentation →](./en/README.md)
+   - [Documentation Française →](./fr/README.md)
+
+2. Review the architecture overview to understand the system design
+
+3. Follow the deployment guide for your environment (local or AWS)
+
+4. Refer to the API documentation for integration details
+
+## 📖 Documentation Structure
+
+```
+documentation/
+├── README.md (this file)
+├── en/                          # English documentation
+│   ├── README.md
+│   ├── architecture/
+│   ├── requirements/
+│   ├── deployment/
+│   └── api/
+└── fr/                          # French documentation
+    ├── README.md
+    ├── architecture/
+    ├── requirements/
+    ├── deployment/
+    └── api/
 ```
 
-## Comment Utiliser Cette Documentation
+## 🤝 Contributing
 
-1. **Développeurs**: Commencez par l'[architecture des composants](./architecture/component-architecture.md)
-2. **Architectes**: Consultez la [vue d'ensemble](./architecture/architecture-overview.md)
-3. **DevOps**: Référez-vous aux [scénarios de déploiement](./deployment/deployment-scenarios.md)
-4. **Testeurs**: Utilisez la [documentation API](./api/api-documentation.md)
+To maintain or update this documentation:
 
-## Processus de Documentation
+1. Review the [DOCUMENTATION_PROCESS.md](./en/DOCUMENTATION_PROCESS.md) (English) or [DOCUMENTATION_PROCESS.md](./fr/DOCUMENTATION_PROCESS.md) (Français)
+2. Follow the established structure and formatting conventions
+3. Update both language versions when making significant changes
+4. Ensure code examples and diagrams are accurate and up-to-date
 
-Voir [DOCUMENTATION_PROCESS.md](./DOCUMENTATION_PROCESS.md) pour comprendre comment cette documentation a été générée à partir du code source.
+## 📞 Support
+
+For questions or issues related to this application, please refer to the appropriate documentation section or contact the development team.
+
+---
+
+**Last Updated**: October 2025  
+**Version**: 1.0  
+**Repository**: progress/openedge-demos/sports-app
