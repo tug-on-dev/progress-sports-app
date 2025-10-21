@@ -110,6 +110,5 @@ Uses CloudFormation quickstart template with parameters for:
 
 ## My Rules
 
-- When responding, always respond in French
 - Prioritize clarity and conciseness in explanations
 - Use technical terminology accurately
